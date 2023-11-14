@@ -1,7 +1,6 @@
 function search() {
-    console.log("what the user typed in: ", document.getElementById("fname").value)
-    document.getElementById('resultDiv').innerHTML = document.getElementById("fname").value;
-
+   
+    var data;
     sdk.searchGet({
       q: document.getElementById("fname").value
     }, {}, {
@@ -15,12 +14,17 @@ function search() {
       }
     }).then((response) => {
       
-      console.log(response);
-      var data = response.data;
-      console.log(data);
+      data = response.data["SearchResponse"];
+      console.log("this is the data:", data);
+      
+      document.getElementById("demo").innerHTML = data.map(structure).valueOf();
     }).catch((error) => {
       console.log('an error occurred', error);
     });
 
-    return
   }
+
+function structure(item){
+  console.log("url: ", item.Photo.url)
+  return `<img src=${item.Photo.url} width=100 height=100>`
+}
