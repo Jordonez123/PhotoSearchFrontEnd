@@ -4,7 +4,14 @@ function search() {
 
     sdk.searchGet({
       q: document.getElementById("fname").value
-    }, {}, {}).then((response) => {
+    }, {}, {
+      headers: {
+        //'x-api-key': 'RNhYQ7lG2M4aiWEAiZwl25uEQfJ3xii39UllhR7T',
+        'x-api-key': 'RNhYQ7lG2M4aiWEAiZwl25uEQfJ3xii39UllhR7T',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Headers':'*',
+      }
+    }).then((response) => {
       
       console.log(response);
       var data = response.data;
