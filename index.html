@@ -3,18 +3,29 @@
 <meta charset="UTF-8">
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
 
-<img src="https://vedantgannuphotos.s3.us-east-2.amazonaws.com/bird1.jpeg">
-
-<div class="">
- <h1>This is a Heading</h1>
- <p>This is a paragraph.</p>
- <p>This is another paragraph.</p>
+<div class="searchOuter">
+  <h2>Search for photos here!</h2>
+  <input type="text" id="fname" name="firstname" placeholder="show me photos of..">
+  <button onclick="search()">search</button>
+  <div class="searchresult" id="resultDiv"></div>
+  
 </div>
 
+<div class="uploadOuter">
+  <h2>Upload photos here!</h2>
+  <form action="">
+    <input type="text" id="fname" name="firstname" placeholder="my custom labels..">
+    <input type="file" id="fileUpload" />
+    <button>Upload</button>
+  </form>
+  
+  
+</div>
+<img src="https://vedantgannuphotos.s3.us-east-2.amazonaws.com/bird1.jpeg">
+<script type = "text/javascript" src="search.js"></script>
 </body>
