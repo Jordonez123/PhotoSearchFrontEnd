@@ -31,12 +31,17 @@
 
 <div class="searchOuter">
   <h2>Search for photos here!</h2>
-  <input type="text" id="fname" name="firstname" placeholder="show me photos of..">
-  <button onclick="search()">search</button>
-  
+  <input type="text" id="fname" name="firstname">
+  <button onclick="search()">text search</button>  
   <div id="demo"></div>
-  
+  <h4 id="status">Press the button below, and start speaking</h4>
+  <button onclick="startRecognition()">Speech to text</button>
+  <p id="result" class="hide"></p>
+  <button onclick="voiceSearch()">voice search</button>  
+	
+	
 </div>
+
 
 <div class="uploadOuter">
   <h2>Upload photos here!</h2>
@@ -49,7 +54,8 @@
   
   
 </div>
-
+<script type = "text/javascript" src="voiceSearch.js"></script>
+<script type = "text/javascript" src="startRecognition.js"></script>
 <script type = "text/javascript" src="search.js"></script>
 <script type = "text/javascript" src="upload.js"></script>
 </body>
